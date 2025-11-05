@@ -1,0 +1,97 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h1 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.game-container {
+    position: relative;
+}
+
+#gameCanvas {
+    border: 2px solid #2c3e50;
+    background-color: #ecf0f1;
+}
+
+.score-container {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.controls {
+    margin-top: 15px;
+    text-align: center;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover:not(:disabled) {
+    background-color: #2980b9;
+}
+
+button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+.game-over, .start-screen, .pause-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 10;
+    min-width: 200px;
+}
+
+.start-screen {
+    display: block;
+}
+
+.game-over, .pause-menu {
+    display: none;
+}
+
+.pause-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.instructions {
+    margin-top: 15px;
+    text-align: center;
+    max-width: 400px;
+    font-size: 14px;
+    color: #7f8c8d;
+}

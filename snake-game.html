@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de la Serpiente</title>
+    <link rel="stylesheet" href="snake-style.css">
+</head>
+<body>
+    <h1>Juego de la Serpiente</h1>
+    
+    <div class="score-container">
+        <div>Puntuación: <span id="score">0</span></div>
+        <div>Récord: <span id="highScore">0</span></div>
+    </div>
+    
+    <div class="game-container">
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div id="gameOver" class="game-over">
+            <h2>¡Game Over!</h2>
+            <p>Tu puntuación: <span id="finalScore">0</span></p>
+            <button id="restartButton">Jugar de nuevo</button>
+        </div>
+        <div id="startScreen" class="start-screen">
+            <h2>Juego de la Serpiente</h2>
+            <p>¡Presiona "Iniciar Juego" para comenzar!</p>
+        </div>
+        <div id="pauseMenu" class="pause-menu">
+            <h2>Juego Pausado</h2>
+            <div class="pause-buttons">
+                <button id="resumeButton">Reanudar</button>
+                <button id="restartPauseButton">Reiniciar</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="controls">
+        <button id="startButton">Iniciar Juego</button>
+        <button id="pauseButton" disabled>Pausa</button>
+    </div>
+    
+    <div class="instructions">
+        <p>Usa las flechas del teclado para mover la serpiente. Come la comida (roja) para crecer y ganar puntos.</p>
+        <p>¡Evita chocar con los bordes y con tu propio cuerpo!</p>
+        <p>Presiona ESC para pausar el juego.</p>
+    </div>
+
+    <script src="snake-script.js"></script>
+</body>
+</html>
